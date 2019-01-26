@@ -1,10 +1,52 @@
-<!DOCTYPE html>
-<html >
-  <head>
 
+<!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+   
+    <style> body { font-size: 1.2em; }</style>
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Custom Service</title>
   </head>
   <body>
-    <h1>My first AngulardfffffffffffffJS App</h1>
+    <h1>Custom Service</h1>
+    <div>
+   
+            <div id="ToBuyController" ng-controller='ToBuyController as ToBuyController'>
+
+              <p class = "error" ng-if = "ToBuyController.items.length == 0">{{ToBuyController.error}}</p>
+               <ol>
+                <li ng-repeat="item in ToBuyController.items">
+                  <p >buy {{ item.quantity }}  {{ item.name }}</p>
+                  <button  ng-click="ToBuyController.addItem($index,item.name,item.quantity);">Bought</button>
+                </li>
+              </ol>
+            </div>
+        
+     
+
+     
+
+            <div id = "AlreadyBoughtController" ng-controller='AlreadyBoughtController as AlreadyBoughtController'>
+              <p  class = "error"  ng-if = "AlreadyBoughtController.items.length == 0">{{AlreadyBoughtController.error}}</p>
+              <ol>
+                <li ng-repeat="item in AlreadyBoughtController.items">
+                  <p class = "pp">buy {{ item.quantity }}  {{ item.name }}</p>
+                  <button class="bb" ng-click="AlreadyBoughtController.removeItem($index);">Remove Item</button>
+                </li>
+              </ol>
+            </div>
+     
+      
+    </div>
+
+
 
   </body>
 </html>
+
+
+

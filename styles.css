@@ -1,0 +1,21 @@
+body {
+  font-size: 1.2em;
+}
+#AlreadyBoughtController, #ToBuyController {
+  float: left;
+}
+#AlreadyBoughtController {
+  margin-left: 100px;
+}
+
+.error {
+  color: red;
+}
+.pp{
+	  margin-left: 100px;
+}
+
+
+.bb{
+	  margin-left: 150px;
+}
