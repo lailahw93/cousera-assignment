@@ -64,6 +64,14 @@ function ShoppingListCheckOff(maxItems=100) {
      {
         name: "coockies",
         quantity: 10
+      }
+      ,     {
+        name: "Donuts",
+        quantity: 100
+      },
+      {
+        name: "Chocolate",
+        quantity: 4
       }];
 
   var BoughtItems = [];

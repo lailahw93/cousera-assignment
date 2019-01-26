@@ -12,11 +12,11 @@
     <title>check off</title>
   </head>
   <body>
-    <h1>check off</h1>
-    <div>
    
+   
+             
             <div id="ToBuyController" ng-controller='ToBuyController as ToBuyController'>
-
+              <h1>To Buy List</h1>
               <p class = "error" ng-if = "ToBuyController.items.length == 0">{{ToBuyController.error}}</p>
                <ol>
                 <li ng-repeat="item in ToBuyController.items">
@@ -28,9 +28,10 @@
         
      
 
-     
+            
 
             <div id = "AlreadyBoughtController" ng-controller='AlreadyBoughtController as AlreadyBoughtController'>
+              <h1>Allready Bought List</h1>
               <p  class = "error"  ng-if = "AlreadyBoughtController.items.length == 0">{{AlreadyBoughtController.error}}</p>
               <ol>
                 <li ng-repeat="item in AlreadyBoughtController.items">
@@ -41,7 +42,7 @@
             </div>
      
       
-    </div>
+
 
 
 
